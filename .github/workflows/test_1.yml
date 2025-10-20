@@ -45,7 +45,7 @@ jobs:
       run: node -v
 
     - name: Install
-      run: npm install
+      run: npm install qwickjs
 
     - name: PHP
       uses: shivammathur/setup-php@v2
