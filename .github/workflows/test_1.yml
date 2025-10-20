@@ -54,3 +54,15 @@ jobs:
 
     - name: PHP version
       run: php -v
+
+  say-hello:
+    runs-on: ubuntu-latest
+    needs: [other]
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: example
+        ports:
+          - "3306:3306"
