@@ -1,0 +1,24 @@
+key: Hola Mundo
+
+person:
+  name: Franco
+  age: 42
+  city: Buenos Aires
+  items:
+    - item1
+    - item2
+    - item3
+
+  items2:
+    - item1: hola
+    - item2: hola
+    - item3: hola
+
+# scripts: >
+#   hola
+#   hola
+#   test
+
+scripts: |
+  touch hola.txt
+  echo "Hola";
