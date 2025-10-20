@@ -83,3 +83,7 @@ jobs:
           echo "Valor: $MY_VAR"
           echo "Valor: $STEP_MY_VAR"
           echo "Valor: ${{ vars.MY_VAR_2 }}"
+
+      - name: Secret
+        run: |
+          echo "Secret: ${{ secrets.MY_SECRET }}"
