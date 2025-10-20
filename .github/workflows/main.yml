@@ -7,7 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: ls
         run: |
-          echo "Hola Mundo" >> hola.txt
-          cat hola.txt
+          chmod +x script.sh
+          ./script.sh
+          # echo "Hola Mundo" >> hola.txt
+          # cat hola.txt
+      
