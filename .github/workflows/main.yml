@@ -11,12 +11,18 @@ jobs:
         uses: actions/checkout@v2
 
       - name: ls
-        uses: ./.github/actions/my-action
-        with:
-          message: "Franco"
+        # uses: ./.github/actions/my-action
+        # with:
+        #   message: "Franco"
         # run: |
         #   chmod +x script.sh
         #   ./script.sh
         #   # echo "Hola Mundo" >> hola.txt
         #   # cat hola.txt
-      
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" >> ~./ssh/id_rsa
+          cat ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 127.0.1.1 >> ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts

@@ -36,24 +36,24 @@ jobs:
     - name: LS
       run: ls -al
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4.0.3
-      with:
-        node-version: latest
+    # - name: Setup Node.js
+    #   uses: actions/setup-node@v4.0.3
+    #   with:
+    #     node-version: latest
 
-    - name: node version
-      run: node -v
+    # - name: node version
+    #   run: node -v
 
-    - name: Install
-      run: npm install qwickjs
+    # - name: Install
+    #   run: npm install qwickjs
 
-    - name: PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.3'
+    # - name: PHP
+    #   uses: shivammathur/setup-php@v2
+    #   with:
+    #     php-version: '8.3'
 
-    - name: PHP version
-      run: php -v
+    # - name: PHP version
+    #   run: php -v
 
   say-hello:
     runs-on: ubuntu-latest
